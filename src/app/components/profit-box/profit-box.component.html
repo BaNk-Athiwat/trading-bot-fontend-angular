@@ -1,0 +1,20 @@
+<div
+	class="relative flex items-center justify-center drop-shadow-md rounded-xl bg-gray-600 w-[504px] h-64"
+>
+	<div
+		class="absolute top-0 left-0 rounded-ee-md text-sm px-2 py-1/2"
+		[ngClass]="{
+			'bg-green-500': platForm === bitkubEnum,
+			'bg-yellow-500': platForm === binanceEnum,
+			'bg-gray-500': platForm === okxEnum
+		}"
+	>
+		{{ platForm || "unknow" }}
+	</div>
+	<div class="">
+		<p class="text-3xl">&asymp; {{ data }}</p>
+		<p class="text-s text-right">
+			@if (platForm === bitkubEnum) { THB } @else { USD }
+		</p>
+	</div>
+</div>

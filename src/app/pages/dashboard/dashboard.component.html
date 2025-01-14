@@ -1,0 +1,48 @@
+<div class="flex flex-col gap-10 mx-20 my-10">
+	<!-- <div class="bg-red-500 break-all">
+		@for (item of coinsViewModel; track item.name) {
+		<div>{{ item.name }}: {{ item.balance }}</div>
+		} @empty {
+		<div>There are no items.</div>
+		}
+	</div> -->
+	<div class="px-6 pb-4">
+		<p class="mb-5">Balance</p>
+		<div class="flex flex-wrap gap-6">
+			<app-balance-box
+				[platForm]="bitkubEnum"
+				[balance]="10000000"
+			></app-balance-box>
+			<app-balance-box
+				[platForm]="binanceEnum"
+				[balance]="123456789"
+			></app-balance-box>
+			<app-balance-box
+				[platForm]="okxEnum"
+				[balance]="100"
+			></app-balance-box>
+		</div>
+	</div>
+	<div class="px-6 pb-4">
+		<p class="mb-5">Total Profit</p>
+		<div class="flex flex-wrap gap-6">
+			<app-profit-box
+				[platForm]="bitkubEnum"
+				[data]="100"
+			></app-profit-box>
+			<app-profit-box
+				[platForm]="binanceEnum"
+				[data]="100"
+			></app-profit-box>
+			<app-profit-box [platForm]="okxEnum" [data]="100"></app-profit-box>
+		</div>
+	</div>
+	<div class="px-6 pb-4">
+		<p class="mb-5">Status Connection</p>
+		<div class="flex flex-wrap gap-6">
+			<app-connection-box [platForm]="bitkubEnum"></app-connection-box>
+			<app-connection-box [platForm]="binanceEnum"></app-connection-box>
+			<app-connection-box [platForm]="okxEnum"></app-connection-box>
+		</div>
+	</div>
+</div>

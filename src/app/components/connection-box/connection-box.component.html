@@ -1,0 +1,19 @@
+<div
+	class="relative flex items-center justify-center drop-shadow-md rounded-xl bg-gray-600 w-60 h-32"
+>
+	<div
+		class="absolute top-0 left-0 rounded-ee-md text-sm px-2 py-1/2"
+		[ngClass]="{
+			'bg-green-500': platForm === bitkubEnum,
+			'bg-yellow-500': platForm === binanceEnum,
+			'bg-gray-500': platForm === okxEnum
+		}"
+	>
+		{{ platForm || "unknow" }}
+	</div>
+	<fa-icon
+		[icon]="faPlusSquare"
+		size="3x"
+		[style.color]="'rgb(51 65 85)'"
+	></fa-icon>
+</div>
