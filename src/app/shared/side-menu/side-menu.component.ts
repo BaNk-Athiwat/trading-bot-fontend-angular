@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { RouterLink } from '@angular/router';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import {
 	faColumns,
@@ -12,7 +13,7 @@ import {
 	templateUrl: './side-menu.component.html',
 	styleUrls: ['./side-menu.component.scss'],
 	standalone: true,
-	imports: [FontAwesomeModule],
+	imports: [FontAwesomeModule, RouterLink],
 })
 export class SideMenuComponent implements OnInit {
 	public faColumns = faColumns;

@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { BitkubService } from '../../services/bitkub.service';
 import { CoinViewModel } from '../../models/coin-view-model';
 import { ComponentsModule } from '../../components/components.module';
-import { Platform } from '../../enums/platform.enum';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { Exchange } from '../../enums/exchange.enum';
 
 @Component({
 	selector: 'app-dashboard',
@@ -14,10 +14,9 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 })
 export class DashboardComponent implements OnInit {
 	private coinsViewModel: CoinViewModel[] = new Array<CoinViewModel>();
-	public readonly platFormEnum: any = Platform;
-	public bitkubEnum: string = Platform.BITKUB;
-	public binanceEnum: string = Platform.BINANCE;
-	public okxEnum: string = Platform.OKX;
+	public bitkubEnum: string = Exchange.BITKUB;
+	public binanceEnum: string = Exchange.BINANCE;
+	public okxEnum: string = Exchange.OKX;
 
 	constructor(private bitkubService: BitkubService) {}
 

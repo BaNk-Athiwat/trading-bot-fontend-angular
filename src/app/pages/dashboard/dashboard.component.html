@@ -10,15 +10,15 @@
 		<p class="mb-5">Balance</p>
 		<div class="flex flex-wrap gap-6">
 			<app-balance-box
-				[platForm]="bitkubEnum"
+				[exchange]="bitkubEnum"
 				[balance]="10000000"
 			></app-balance-box>
 			<app-balance-box
-				[platForm]="binanceEnum"
+				[exchange]="binanceEnum"
 				[balance]="123456789"
 			></app-balance-box>
 			<app-balance-box
-				[platForm]="okxEnum"
+				[exchange]="okxEnum"
 				[balance]="100"
 			></app-balance-box>
 		</div>
@@ -27,22 +27,22 @@
 		<p class="mb-5">Total Profit</p>
 		<div class="flex flex-wrap gap-6">
 			<app-profit-box
-				[platForm]="bitkubEnum"
+				[exchange]="bitkubEnum"
 				[data]="100"
 			></app-profit-box>
 			<app-profit-box
-				[platForm]="binanceEnum"
+				[exchange]="binanceEnum"
 				[data]="100"
 			></app-profit-box>
-			<app-profit-box [platForm]="okxEnum" [data]="100"></app-profit-box>
+			<app-profit-box [exchange]="okxEnum" [data]="100"></app-profit-box>
 		</div>
 	</div>
 	<div class="px-6 pb-4">
 		<p class="mb-5">Status Connection</p>
 		<div class="flex flex-wrap gap-6">
-			<app-connection-box [platForm]="bitkubEnum"></app-connection-box>
-			<app-connection-box [platForm]="binanceEnum"></app-connection-box>
-			<app-connection-box [platForm]="okxEnum"></app-connection-box>
+			<app-connection-box [exchange]="bitkubEnum"></app-connection-box>
+			<app-connection-box [exchange]="binanceEnum"></app-connection-box>
+			<app-connection-box [exchange]="okxEnum"></app-connection-box>
 		</div>
 	</div>
 </div>

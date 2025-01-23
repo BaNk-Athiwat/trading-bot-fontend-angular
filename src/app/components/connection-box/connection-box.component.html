@@ -1,19 +1,20 @@
 <div
 	class="relative flex items-center justify-center drop-shadow-md rounded-xl bg-gray-600 w-60 h-32"
+	[routerLink]="[exchange | lowercase]"
 >
 	<div
 		class="absolute top-0 left-0 rounded-ee-md text-sm px-2 py-1/2"
 		[ngClass]="{
-			'bg-green-500': platForm === bitkubEnum,
-			'bg-yellow-500': platForm === binanceEnum,
-			'bg-gray-500': platForm === okxEnum
+			'bg-green-500': exchange === bitkubEnum,
+			'bg-yellow-500': exchange === binanceEnum,
+			'bg-gray-500': exchange === okxEnum
 		}"
 	>
-		{{ platForm || "unknow" }}
+		{{ exchange || "unknow" }}
 	</div>
 	<fa-icon
 		[icon]="faPlusSquare"
 		size="3x"
-		[style.color]="'rgb(51 65 85)'"
+		[style.color]="'rgb(226 232 240)'"
 	></fa-icon>
 </div>

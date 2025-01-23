@@ -3,21 +3,21 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 
-import { SettingComponent } from './setting.component';
+import { SettingApiKeyComponent } from './setting-api-key.component';
 
-describe('SettingComponent', () => {
-  let component: SettingComponent;
-  let fixture: ComponentFixture<SettingComponent>;
+describe('SettingApiKeyComponent', () => {
+  let component: SettingApiKeyComponent;
+  let fixture: ComponentFixture<SettingApiKeyComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ SettingComponent ]
+      declarations: [ SettingApiKeyComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(SettingComponent);
+    fixture = TestBed.createComponent(SettingApiKeyComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -4,17 +4,18 @@
 	<div
 		class="absolute top-0 left-0 rounded-ee-md text-sm px-2 py-1/2"
 		[ngClass]="{
-			'bg-green-500': platForm === bitkubEnum,
-			'bg-yellow-500': platForm === binanceEnum,
-			'bg-gray-500': platForm === okxEnum
+			'bg-green-500': exchange === bitkubEnum,
+			'bg-yellow-500': exchange === binanceEnum,
+			'bg-gray-500': exchange === okxEnum
 		}"
 	>
-		{{ platForm || "unknow" }}
+		{{ exchange || "unknow" }}
 	</div>
 	<div class="">
+		<p>Profit box component</p>
 		<p class="text-3xl">&asymp; {{ data }}</p>
 		<p class="text-s text-right">
-			@if (platForm === bitkubEnum) { THB } @else { USD }
+			@if (exchange === bitkubEnum) { THB } @else { USD }
 		</p>
 	</div>
 </div>

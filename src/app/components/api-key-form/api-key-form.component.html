@@ -1,0 +1,57 @@
+<form #apiForm="ngForm" (ngSubmit)="onSubmit(apiForm)" class="p-4">
+	<div class="mb-6">
+		<label for="apiKey" class="form-label block mb-2">API Key</label>
+		<input
+			type="password"
+			class="form-control w-[600px] h-8 bg-slate-600 border border-slate-500 rounded-md shadow-md px-6 py-2"
+			id="apiKey"
+			name="apiKey"
+			[(ngModel)]="keyViewModel.apiKey"
+			required
+			#apiKeyModel="ngModel"
+		/>
+		<div
+			*ngIf="
+				apiKeyModel.invalid &&
+				(apiKeyModel.dirty || apiKeyModel.touched)
+			"
+			class="text-red-300"
+		>
+			<small *ngIf="apiKeyModel.errors?.['required']">
+				API Key is required
+			</small>
+		</div>
+	</div>
+
+	<div class="mb-6">
+		<label for="secretKey" class="form-label block mb-2">Secret Key</label>
+		<input
+			type="password"
+			class="form-control w-[600px] h-8 bg-slate-600 border border-slate-500 rounded-md shadow-md px-6 py-2"
+			id="secretKey"
+			name="secretKey"
+			[(ngModel)]="keyViewModel.secretKey"
+			required
+			#secretKeyModel="ngModel"
+		/>
+		<div
+			*ngIf="
+				secretKeyModel.invalid &&
+				(secretKeyModel.dirty || secretKeyModel.touched)
+			"
+			class="text-red-300"
+		>
+			<small *ngIf="secretKeyModel.errors?.['required']"
+				>Secret Key is required</small
+			>
+		</div>
+	</div>
+
+	<button
+		type="submit"
+		class="px-4 py-2 border border-slate-300 rounded-md shadow-md bg-slate-600 hover:bg-slate-700"
+		[disabled]="!apiForm.valid"
+	>
+		Submit
+	</button>
+</form>

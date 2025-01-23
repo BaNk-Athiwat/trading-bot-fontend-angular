@@ -6,9 +6,11 @@
 html,
 body {
     min-height: 100vh;
+    background-color: rgb(75 85 99 / var(--tw-bg-opacity, 1)); // bg-gray-600
+    color: rgb(226 232 240 / var(--tw-bg-opacity, 1)); // bg-slate-200
     background-image: linear-gradient(to bottom right,
             rgb(75 85 99 / var(--tw-bg-opacity, 1)),
-            rgb(107 114 128 / var(--tw-bg-opacity, 1)))
+            rgb(107 114 128 / var(--tw-bg-opacity, 1))); // bg-gray-500 to bg-gray-600
 }
 
 * {
@@ -16,6 +18,4 @@ body {
     padding: 0;
     box-sizing: border-box;
     font-family: Mitr;
-    color: rgb(226 232 240 / var(--tw-bg-opacity, 1));
-    ;
 }

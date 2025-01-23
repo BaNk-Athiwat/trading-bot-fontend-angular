@@ -1,19 +1,19 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Platform } from '../../enums/platform.enum';
+import { Exchange } from '../../enums/exchange.enum';
 
 @Component({
 	selector: 'app-profit-box',
 	templateUrl: './profit-box.component.html',
-	styleUrls: ['./profit-box.component.css'],
+	styleUrls: ['./profit-box.component.scss'],
 })
 export class ProfitBoxComponent implements OnInit {
-	@Input() platForm: string = '';
+	@Input() exchange: string = '';
 	@Input() data: number = 0;
 
-	public readonly platFormEnum = Platform;
-	public bitkubEnum = Platform.BITKUB;
-	public binanceEnum = Platform.BINANCE;
-	public okxEnum = Platform.OKX;
+	public bitkubEnum = Exchange.BITKUB;
+	public binanceEnum = Exchange.BINANCE;
+	public okxEnum = Exchange.OKX;
+
 	constructor() {}
 
 	ngOnInit() {}

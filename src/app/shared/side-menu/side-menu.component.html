@@ -1,20 +1,28 @@
-<div class="min-w-14 max-w-56 w-56 h-full px-10 py-16">
+<div class="min-w-14 max-w-56 w-56 h-full px-5 py-16">
 	<ul class="flex flex-col gap-8">
-		<li class="flex gap-4 items-center">
-			<fa-icon [icon]="faColumns"></fa-icon>
-			Dashboard
+		<li>
+			<a routerLink="/dashboard" class="flex gap-4 items-center">
+				<fa-icon [icon]="faColumns" class="text-center w-6"></fa-icon>
+				Dashboard
+			</a>
 		</li>
-		<li class="flex gap-4 items-center">
-			<fa-icon [icon]="faRobot"></fa-icon>
-			Run Bot
+		<li>
+			<a routerLink="/run-bot" class="flex gap-4 items-center">
+				<fa-icon [icon]="faRobot" class="text-center w-6"></fa-icon>
+				Run Bot
+			</a>
 		</li>
-		<li class="flex gap-4 items-center">
-			<fa-icon [icon]="faUser"></fa-icon>
-			Profile
+		<li>
+			<a routerLink="/profile" class="flex gap-4 items-center">
+				<fa-icon [icon]="faUser" class="text-center w-6"></fa-icon>
+				Profile
+			</a>
 		</li>
-		<li class="flex gap-4 items-center">
-			<fa-icon [icon]="faSlidersH"></fa-icon>
-			Setting
+		<li>
+			<a routerLink="/setting-api-key" class="flex gap-4 items-center">
+				<fa-icon [icon]="faSlidersH" class="text-center w-6"></fa-icon>
+				Setting API Key
+			</a>
 		</li>
 	</ul>
 </div>

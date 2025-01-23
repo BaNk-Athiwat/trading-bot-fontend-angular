@@ -1,20 +1,19 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { faPlusSquare } from '@fortawesome/free-solid-svg-icons';
-import { Platform } from '../../enums/platform.enum';
+import { Exchange } from '../../enums/exchange.enum';
 
 @Component({
 	selector: 'app-connection-box',
 	templateUrl: './connection-box.component.html',
-	styleUrls: ['./connection-box.component.css'],
+	styleUrls: ['./connection-box.component.scss'],
 })
 export class ConnectionBoxComponent implements OnInit {
-	@Input() platForm: string = '';
-	public faPlusSquare = faPlusSquare;
+	@Input() exchange: string = '';
 
-	public readonly platFormEnum = Platform;
-	public bitkubEnum = Platform.BITKUB;
-	public binanceEnum = Platform.BINANCE;
-	public okxEnum = Platform.OKX;
+	public faPlusSquare = faPlusSquare;
+	public bitkubEnum = Exchange.BITKUB;
+	public binanceEnum = Exchange.BINANCE;
+	public okxEnum = Exchange.OKX;
 
 	constructor() {}
 

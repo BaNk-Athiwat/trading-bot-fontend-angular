@@ -1,19 +1,18 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Platform } from '../../enums/platform.enum';
+import { Exchange } from '../../enums/exchange.enum';
 
 @Component({
 	selector: 'app-balance-box',
 	templateUrl: './balance-box.component.html',
-	styleUrls: ['./balance-box.component.css'],
+	styleUrls: ['./balance-box.component.scss'],
 })
 export class BalanceBoxComponent implements OnInit {
-	@Input() platForm: string = '';
+	@Input() exchange: string = '';
 	@Input() balance: number = 0;
 
-	public readonly platFormEnum = Platform;
-	public bitkubEnum = Platform.BITKUB;
-	public binanceEnum = Platform.BINANCE;
-	public okxEnum = Platform.OKX;
+	public bitkubEnum = Exchange.BITKUB;
+	public binanceEnum = Exchange.BINANCE;
+	public okxEnum = Exchange.OKX;
 
 	constructor() {}
 
