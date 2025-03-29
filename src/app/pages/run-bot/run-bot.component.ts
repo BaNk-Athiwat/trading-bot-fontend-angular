@@ -4,6 +4,7 @@ import { Component, OnInit } from '@angular/core';
     selector: 'app-run-bot',
     templateUrl: './run-bot.component.html',
     styleUrls: ['./run-bot.component.scss'],
+    standalone: false
 })
 export class RunBotComponent implements OnInit {
     constructor() {}

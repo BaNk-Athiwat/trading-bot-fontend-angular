@@ -5,6 +5,7 @@ import { MainLayoutComponent } from './layouts/layout-main/layout-main.component
 import { ProfileComponent } from './pages/profile/profile.component';
 import { RunBotComponent } from './pages/run-bot/run-bot.component';
 import { SettingApiKeyComponent } from './pages/setting-api-key/setting-api-key.component';
+import { authGuard } from './auth/auth.guard';
 
 export const routes: Routes = [
     {
@@ -19,6 +20,7 @@ export const routes: Routes = [
     {
         path: '',
         component: MainLayoutComponent,
+        canActivate: [authGuard],
         children: [
             {
                 path: 'dashboard',
@@ -40,6 +42,6 @@ export const routes: Routes = [
     },
     {
         path: '**',
-        component: SigninComponent,
+        redirectTo: 'signin',
     },
 ];

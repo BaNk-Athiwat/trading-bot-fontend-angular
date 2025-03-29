@@ -4,6 +4,7 @@ import { Component, OnInit } from '@angular/core';
     selector: 'app-signin',
     templateUrl: './signin.component.html',
     styleUrls: ['./signin.component.scss'],
+    standalone: false
 })
 export class SigninComponent implements OnInit {
     constructor() {}
