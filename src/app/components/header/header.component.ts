@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
+import { AuthService } from '../../auth/auth.service';
 
 @Component({
     selector: 'app-header',
@@ -7,7 +8,14 @@ import { Component, OnInit } from '@angular/core';
     styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent implements OnInit {
+    private authservice: AuthService = inject(AuthService);
+
     constructor() {}
 
     ngOnInit() {}
+
+    signOut() {
+        this.authservice.signout();
+        console.log('Sign out');
+    }
 }

@@ -1,3 +1,39 @@
-<p>
-  sidemenu-main works!
-</p>
+<div
+    class="flex flex-col gap-2 items-center h-full shadow-xl border-r border-sky-200 px-4 py-10 text-xs"
+>
+    <a
+        routerLink="/dashboard"
+        routerLinkActive="text-neutral-300 bg-gray-700/70 rounded-lg transition-all duration-200 ease-in-out"
+        class="flex flex-col justify-center items-center w-[80px] h-[90px] hover:cursor-pointer hover:text-neutral-300 hover:bg-gray-700/70 hover:rounded-lg transition-all duration-200 ease-in-out"
+    >
+        <fa-icon [icon]="faColumns" class="text-center fa-2xl mb-2"></fa-icon>
+        <div>Dashboard</div>
+    </a>
+    <a
+        routerLink="/run-bot"
+        routerLinkActive="text-neutral-300 bg-gray-700/70 rounded-lg transition-all duration-200 ease-in-out"
+        class="flex flex-col justify-center items-center w-[80px] h-[90px] hover:cursor-pointer hover:text-neutral-300 hover:bg-gray-700/70 hover:rounded-lg transition-all duration-200 ease-in-out"
+    >
+        <fa-icon [icon]="faRobot" class="text-center fa-2xl mb-2"></fa-icon>
+        <div>Run Bot</div>
+    </a>
+    <a
+        routerLink="/profile"
+        routerLinkActive="text-neutral-300 bg-gray-700/70 rounded-lg transition-all duration-200 ease-in-out"
+        class="flex flex-col justify-center items-center w-[80px] h-[90px] hover:cursor-pointer hover:text-neutral-300 hover:bg-gray-700/70 hover:rounded-lg transition-all duration-200 ease-in-out"
+    >
+        <fa-icon [icon]="faSlidersH" class="text-center fa-2xl mb-2"></fa-icon>
+        <div>Profile</div>
+    </a>
+    <a
+        routerLink="/key-config"
+        routerLinkActive="text-neutral-300 bg-gray-700/70 rounded-lg transition-all duration-200 ease-in-out"
+        class="flex flex-col justify-center items-center w-[80px] h-[90px] hover:cursor-pointer hover:text-neutral-300 hover:bg-gray-700/70 hover:rounded-lg transition-all duration-200 ease-in-out"
+    >
+        <fa-icon [icon]="faUser" class="text-center fa-2xl mb-2"></fa-icon>
+        <div class="text-center">
+            <p>Config</p>
+            <p>API Key</p>
+        </div>
+    </a>
+</div>

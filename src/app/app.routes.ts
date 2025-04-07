@@ -1,11 +1,12 @@
 import { Routes } from '@angular/router';
 import { SigninComponent } from './pages/signin/signin.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
-import { MainLayoutComponent } from './layouts/layout-main/layout-main.component';
+import { MainLayoutComponent } from './layout/layout-main/layout-main.component';
 import { ProfileComponent } from './pages/profile/profile.component';
 import { RunBotComponent } from './pages/run-bot/run-bot.component';
-import { SettingApiKeyComponent } from './pages/setting-api-key/setting-api-key.component';
-import { authGuard } from './auth/auth.guard';
+import { authGuard, signGuard } from './auth/auth.guard';
+import { ExchangeConfigSelectorComponent } from './pages/exchange-config-selector/exchange-config-selector.component';
+import { ApiKeyConfigComponent } from './pages/api-key-config/api-key-config.component';
 
 export const routes: Routes = [
     {
@@ -16,6 +17,7 @@ export const routes: Routes = [
     {
         path: 'signin',
         component: SigninComponent,
+        canActivate: [signGuard],
     },
     {
         path: '',
@@ -35,8 +37,12 @@ export const routes: Routes = [
                 component: RunBotComponent,
             },
             {
-                path: 'setting-api-key',
-                component: SettingApiKeyComponent,
+                path: 'key-config',
+                component: ExchangeConfigSelectorComponent,
+            },
+            {
+                path: 'key-config/:id',
+                component: ApiKeyConfigComponent,
             },
         ],
     },

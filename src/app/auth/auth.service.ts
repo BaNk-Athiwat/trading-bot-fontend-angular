@@ -21,6 +21,7 @@ export class AuthService {
 
     setToken(token: string) {
         this.token = token;
+        this.cookieService.set('access_token', token);
     }
 
     getToken(): string | null {
@@ -28,7 +29,7 @@ export class AuthService {
     }
 
     isAuthenticated(): boolean {
-        return this.getToken() !== null;
+        return this.getToken() !== null && this.getToken() !== '';
     }
 
     signin(signinRequestModel: SigninRequestModel) {
@@ -43,7 +44,6 @@ export class AuthService {
                     this.cookieService.set('access_token', data.token);
                     this.router.navigateByUrl('dashboard');
                 }
-                alert('login failed');
             });
     }
 

@@ -4,7 +4,7 @@ import { Component, OnInit } from '@angular/core';
     selector: 'app-dashboard',
     templateUrl: './dashboard.component.html',
     styleUrls: ['./dashboard.component.scss'],
-    standalone: false
+    standalone: false,
 })
 export class DashboardComponent implements OnInit {
     constructor() {}
