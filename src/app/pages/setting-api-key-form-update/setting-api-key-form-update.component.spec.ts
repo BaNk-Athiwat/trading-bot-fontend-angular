@@ -3,21 +3,21 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 
-import { ApiKeyConfigComponent } from './api-key-config.component';
+import { SettingApiKeyFormUpdateComponent } from './setting-api-key-form-update.component';
 
-describe('ApiKeyConfigComponent', () => {
-  let component: ApiKeyConfigComponent;
-  let fixture: ComponentFixture<ApiKeyConfigComponent>;
+describe('SettingApiKeyFormUpdateComponent', () => {
+  let component: SettingApiKeyFormUpdateComponent;
+  let fixture: ComponentFixture<SettingApiKeyFormUpdateComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ApiKeyConfigComponent ]
+      declarations: [ SettingApiKeyFormUpdateComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ApiKeyConfigComponent);
+    fixture = TestBed.createComponent(SettingApiKeyFormUpdateComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

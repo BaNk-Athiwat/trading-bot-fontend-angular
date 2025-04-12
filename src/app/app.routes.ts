@@ -5,8 +5,9 @@ import { MainLayoutComponent } from './layout/layout-main/layout-main.component'
 import { ProfileComponent } from './pages/profile/profile.component';
 import { RunBotComponent } from './pages/run-bot/run-bot.component';
 import { authGuard, signGuard } from './auth/auth.guard';
-import { ExchangeConfigSelectorComponent } from './pages/exchange-config-selector/exchange-config-selector.component';
-import { ApiKeyConfigComponent } from './pages/api-key-config/api-key-config.component';
+import { SettingApiKeyExchangeComponent } from './pages/setting-api-key-exchange/setting-api-key-exchange.component';
+import { SettingApiKeyFormNewComponent } from './pages/setting-api-key-form-new/setting-api-key-form-new.component';
+import { SettingApiKeyFormUpdateComponent } from './pages/setting-api-key-form-update/setting-api-key-form-update.component';
 
 export const routes: Routes = [
     {
@@ -37,12 +38,16 @@ export const routes: Routes = [
                 component: RunBotComponent,
             },
             {
-                path: 'key-config',
-                component: ExchangeConfigSelectorComponent,
+                path: 'setting-api-key',
+                component: SettingApiKeyExchangeComponent,
             },
             {
-                path: 'key-config/:id',
-                component: ApiKeyConfigComponent,
+                path: 'setting-api-key/:id',
+                component: SettingApiKeyFormNewComponent,
+            },
+            {
+                path: 'setting-api-key/:id/update',
+                component: SettingApiKeyFormUpdateComponent,
             },
         ],
     },

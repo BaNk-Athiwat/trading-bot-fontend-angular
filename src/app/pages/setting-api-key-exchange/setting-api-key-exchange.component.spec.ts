@@ -3,21 +3,21 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 
-import { ExchangeConfigSelectorComponent } from './exchange-config-selector.component';
+import { SettingApiKeyExchangeComponent } from './setting-api-key-exchange.component';
 
-describe('ExchangeConfigSelectorComponent', () => {
-  let component: ExchangeConfigSelectorComponent;
-  let fixture: ComponentFixture<ExchangeConfigSelectorComponent>;
+describe('SettingApiKeyExchangeComponent', () => {
+  let component: SettingApiKeyExchangeComponent;
+  let fixture: ComponentFixture<SettingApiKeyExchangeComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ExchangeConfigSelectorComponent ]
+      declarations: [ SettingApiKeyExchangeComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ExchangeConfigSelectorComponent);
+    fixture = TestBed.createComponent(SettingApiKeyExchangeComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
