@@ -16,8 +16,6 @@ export class KeyService {
     constructor() {}
 
     checkKeyExist(exchangeUuid: string): Observable<ApiResponseModel> {
-        console.log('checkKeyExist', exchangeUuid);
-
         const headers = new HttpHeaders({
             'Content-Type': 'application/json',
             Authorization: `Bearer ${this.cookieService.get('access_token')}`,

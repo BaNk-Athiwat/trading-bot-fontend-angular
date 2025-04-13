@@ -65,7 +65,6 @@ export class SettingApiKeyFormUpdateComponent implements OnInit {
             .updateKey(keyConfigModel)
             .subscribe((res: ApiResponseModel) => {
                 if (res.status === 200) {
-                    console.log('Key updated successfully:', res);
                     this.router.navigate([`/setting-api-key`]);
                 } else {
                     console.error('Error updating key:', res.message);

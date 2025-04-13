@@ -33,8 +33,6 @@ export class SettingApiKeyExchangeComponent implements OnInit {
             .subscribe((res: ApiResponseModel) => {
                 if (res.status === 200) {
                     let data = res.data;
-                    console.log('Exchange List:', data);
-
                     this.exchangeModelList = data.map((item: ExchangeModel) => {
                         return new ExchangeModel(
                             item.exchangeUuid,
